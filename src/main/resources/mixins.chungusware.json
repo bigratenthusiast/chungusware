@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "monster.bigrat.chungusware.mixins",
+  "refmap": "mixins.chungusware.refmap.json",
+  "verbose": true,
+  "injectors": {
+    "maxShiftBy": 2
+  },
+  "mixins": [
+    "IEntity",
+    "IEntityPlayerSP",
+    "IMinecraft",
+    "IRendererLivingEntity",
+    "IRenderManager",
+    "MixinAbstractClientPlayer",
+    "MixinEntity",
+    "MixinEntityLivingBase",
+    "MixinEntityPlayer",
+    "MixinEntityPlayerSP",
+    "MixinEntityRenderer",
+    "MixinGuiIngame",
+    "MixinMinecraft",
+    "MixinNetworkManager",
+    "MixinRender",
+    "MixinRendererLivingEntity"
+  ]
+}

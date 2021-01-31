@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "chungusware",
+    "name": "ChungusWare",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "1.8.9",
+    "url": "https://bigrat.monster",
+    "updateUrl": "",
+    "authorList": ["BigratEnthusiast"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
