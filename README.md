@@ -3,7 +3,7 @@
 
 [![Build Version](https://img.shields.io/badge/Version-0.0.1-yellow.svg)](https://github.com/bigratenthusiast/chungusware) [![Lisence](https://img.shields.io/badge/lisence-MIT-brightgreen.svg)](https://github.com/bigratenthusiast/chungusware/blob/main/LICENSE)
 
-the *sees buldge* chunguswawe c-cwient.
+the *\*sees buldge\** chunguswawe c-cwient.
 
 ![dream chungus 🥰🥰🥰](https://raw.githubusercontent.com/bigratmonster/bigrat.monster/master/media/dream_chungus.png)
 
