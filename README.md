@@ -1,34 +1,34 @@
-# chungusware
+# chunguswawe
 
 
 [![Build Version](https://img.shields.io/badge/Version-0.0.1-yellow.svg)](https://github.com/bigratenthusiast/chungusware) [![Lisence](https://img.shields.io/badge/lisence-MIT-brightgreen.svg)](https://github.com/bigratenthusiast/chungusware/blob/main/LICENSE)
 
-The chungusware client.
+the *sees buldge* chunguswawe c-cwient.
 
 ![dream chungus 🥰🥰🥰](https://raw.githubusercontent.com/bigratmonster/bigrat.monster/master/media/dream_chungus.png)
 
-## Installation
+## Instawwation
 
-Use gradle to build the jar.
+Use gwadwe t-to b-buiwd the x3 jaw.
 
-### Setup
+### setup *\*whispers to self\**
 
-You can use MultiMC to use this mod and can set it up in a manner similar to optifine.. or not its your choice 👉 👈 🥺
+You c-can use M-M-MuwtiMC t-to use this mod and c-can set i-it up in a mannyew simiwaw t-to optifinye.. ow (・`ω´・) nyot its youw choice 👉 👈 🥺
 
-## Usage
+## U-Usage
 
-Using the mod; there is no GUI. Modules have keybinds hardcoded and the ones that do not can be toggled with the `.toggle [Module]` command. 🥰
+Using the x3 mod; thewe is nyo GUI. Moduwes have keybinds hawdcoded and the x3 onyes that do nyot c-can be toggwed with the x3 `.toggwe [Moduwe]` command. 🥰
+ *\*boops your nose\**
 
-## Why is it so bad?? 
-This is a meme client.
+## Why is i-it so bad?!! *\*whispers to self\** 
+This is a meme cwient.
 
+## Contwibuting
+Puww wequests awe wewcome!
 
-## Contributing
-Pull requests are welcome!
+## Wicense
+[MIT :3](https://choosealicense.com/licenses/mit/)
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## KOTLIN WHEN??
-make a pr. coward.
+## KOTWIN WHEN?!?!
+make a pw. *\*starts twerking\** cowawd.
 ![sus](https://i.imgur.com/oLcoPsw.png)
