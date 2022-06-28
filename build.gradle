@@ -1,0 +1,121 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "https://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = 'spongepowered'
+            url = 'https://repo.spongepowered.org/maven'
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url 'https://jitpack.io'
+        }
+
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '2.1-SNAPSHOT'
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.6-SNAPSHOT'
+        classpath group: 'com.github.jengelman.gradle.plugins', name: 'shadow', version: '4.0.4'
+    }
+}
+
+configurations {
+    embed
+    compile.extendsFrom(embed)
+}
+
+apply plugin: 'net.minecraftforge.gradle.tweaker-client'
+apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'java'
+
+
+sourceCompatibility = targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+
+version = "1.0"
+group = "monster.bigrat.chungusware"
+
+minecraft {
+    version = "1.8.9"
+    tweakClass = "monster.bigrat.chungusware.launch.ChungusTweaker"
+    mappings = "stable_22"
+    runDir = "run"
+    clientJvmArgs = ["-XX:-DisableExplicitGC"]
+}
+
+dependencies {
+    embed('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+        exclude module: 'launchwrapper'
+        exclude module: 'guava'
+        exclude module: 'gson'
+        exclude module: 'commons-io'
+    }
+    embed("com.github.ZeroMemes:Alpine:1.9")
+    embed("com.github.FalseHonesty:reflections:855f40b80b")
+    embed("com.github.Vatuu:discord-rpc:1.6.2")
+    embed("org.ow2.asm:asm:5.0.3")
+    embed fileTree(dir: 'libs', include: '*.jar')
+
+}
+
+mixin {
+    defaultObfuscationEnv notch
+    add sourceSets.main, "mixins.chungusware.refmap.json"
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    maven {
+        name = 'spongepowered'
+        url = 'https://repo.spongepowered.org/maven/'
+    }
+    mavenCentral()
+    jcenter()
+}
+
+processResources {
+    inputs.files "src/main/resources"
+    outputs.dir "build/classes/main"
+    copy {
+        from("src/main/resources")
+        into("build/classes/main")
+    }
+}
+
+jar {
+    dependsOn configurations.compile
+    from {
+        configurations.embed.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+
+}
+
+jar {
+    manifest.attributes(
+            "MixinConfigs": 'mixins.chungusware.json',
+            "TweakClass": 'monster.bigrat.chungusware.launch.ChungusTweaker',
+            "TweakOrder": 0,
+            "Manifest-Version": 1.0
+    )
+
+    configurations.embed.each { dep ->
+        from(project.zipTree(dep)) {
+            exclude 'META-INF', 'META-INF/**'
+            exclude 'org/jetbrains/annotations', 'org/jetbrains/annotations/**'
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.3'
+}
