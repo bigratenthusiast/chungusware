@@ -13,7 +13,7 @@ public class AutoTool extends Module {
     private final Listener<ClickBlockEvent> clickBlockEventListener = new Listener<>(event -> {
         Block target = mc.theWorld.getBlockState(event.location).getBlock();
 
-        float max = mc.thePlayer.getToolDigEfficiency(target);
+        float max = 1.0f;
         int index = -1;
 
         for (int hotbarSlot = 0; hotbarSlot < 9; hotbarSlot++) {
