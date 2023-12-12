@@ -9,7 +9,5 @@ public class RenderEntityEvent extends ClientEvent {
     public double x, y, z;
     public float entityYaw, partialTicks;
 
-    public RenderEntityEvent(Entity entity, double x, double y, double z, float entityYaw, float partialTicks) {
-
-    }
+    public RenderEntityEvent(Entity entity, double x, double y, double z, float entityYaw, float partialTicks) {}
 }

@@ -40,6 +40,4 @@ public interface IEntityRenderer {
 
     @Accessor
     ResourceLocation[] getShaderResourceLocations();
-
-
 }

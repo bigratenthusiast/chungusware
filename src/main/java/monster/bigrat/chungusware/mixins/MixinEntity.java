@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Entity.class)
 public abstract class MixinEntity {
-
     @Shadow
     public abstract void setOutsideBorder(boolean p_setOutsideBorder_1_);
 
@@ -31,5 +30,4 @@ public abstract class MixinEntity {
         return (((IEntity) this).getDataWatcher().getWatchableObjectByte(0) & 1 << 1) != 0 || Client.moduleEnabled("safewalk");
         // get flag 1 : is sneaking
     }
-
 }

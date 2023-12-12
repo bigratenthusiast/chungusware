@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutorService;
 
 @Mixin(SkinManager.class)
 public class MixinSkinManager {
-
     @Shadow
     @Final
     private static ExecutorService THREAD_POOL;
@@ -25,5 +24,4 @@ public class MixinSkinManager {
     public void loadProfileTextures(final GameProfile gameProfile, final SkinManager.SkinAvailableCallback callback, final boolean secure) {
         THREAD_POOL.submit(Utils.getRunnable(Minecraft.getMinecraft().getSkinManager(), gameProfile, callback, secure));
     }
-
 }

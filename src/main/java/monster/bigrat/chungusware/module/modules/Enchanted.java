@@ -11,9 +11,6 @@ public class Enchanted extends Module {
     private final Minecraft mc = Minecraft.getMinecraft();
     private final FontRenderer normal = mc.fontRendererObj;
     private final FontRenderer galactic = mc.standardGalacticFontRenderer;
-    public Enchanted() {
-        super("Enchanted", Keyboard.KEY_NONE, Type.RENDER);
-    }
 
     @Override
     public void onEnable() {
@@ -27,5 +24,9 @@ public class Enchanted extends Module {
         Hud.fontRenderer = normal;
         mc.fontRendererObj = normal;
         mc.standardGalacticFontRenderer = galactic;
+    }
+
+    public Enchanted() {
+        super("Enchanted", Keyboard.KEY_NONE, Type.RENDER);
     }
 }

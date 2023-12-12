@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 public interface IEntityFootStepFX {
     @Accessor
     int getFootstepAge();
+
     @Accessor
     int getFootstepMaxAge();
 }

@@ -21,26 +21,37 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MixinMinecraft {
     @Shadow
     private boolean fullscreen;
+
     @Shadow
     public GameSettings gameSettings;
+
     @Shadow
     public int displayWidth;
+
     @Shadow
     public int displayHeight;
+
     @Shadow
     private int tempDisplayWidth;
+
     @Shadow
     private int tempDisplayHeight;
+
     @Shadow
     public GuiScreen currentScreen;
+
     @Shadow
     public abstract void resize(int width, int height);
+
     @Shadow
     public abstract void updateFramebufferSize();
+
     @Shadow
     public abstract void updateDisplay();
+
     @Shadow
     public abstract void updateDisplayMode();
+
     @Shadow
     @Final
     private static Logger logger;

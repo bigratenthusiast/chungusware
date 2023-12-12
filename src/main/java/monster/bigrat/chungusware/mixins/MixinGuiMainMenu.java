@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(GuiMainMenu.class)
 public class MixinGuiMainMenu {
-
     /**
      * @author bigratenthusiast
      */

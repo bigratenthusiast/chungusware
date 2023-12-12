@@ -63,7 +63,12 @@ public class Hud {
                 Gui.drawRect(left - 3, top, sr.getScaledWidth(), top + 4 + fontRenderer.FONT_HEIGHT, Utils.Colors.transparentGray);
 
                 // Rectangle
-                Gui.drawRect(left - 6, top, left - 3, top + 4 + fontRenderer.FONT_HEIGHT, Client.moduleEnabled("transrights") ? Utils.transFlagColors(enabledModules.size())[i % 4] : -1);
+                Gui.drawRect(
+                        left - 6, top,
+                        left - 3,
+                        top + 4 + fontRenderer.FONT_HEIGHT,
+                        Client.moduleEnabled("watermelon") ? Utils.palestineColors(enabledModules.size())[i % 3] : -1
+                );
 
                 fontRenderer.drawString(m.name, left, top + 3, -1, true);
             }

@@ -24,7 +24,6 @@ public class Client {
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<>();
     public static Hud hud = new Hud();
 
-
     public static void onStart() {
         System.err.println(name);
         Display.setTitle("Minecraft (" + name + ")");

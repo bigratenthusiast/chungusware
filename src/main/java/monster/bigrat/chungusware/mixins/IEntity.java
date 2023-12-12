@@ -9,12 +9,16 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 public interface IEntity {
     @Accessor
     DataWatcher getDataWatcher();
+
     @Accessor
     int getEntityId();
+
     @Accessor
     double getPosX();
+
     @Accessor
     double getPosY();
+
     @Accessor
     double getPosZ();
 }

@@ -13,5 +13,4 @@ public class SayCommand extends Command {
     public void run(String[] args) {
         mc.thePlayer.sendQueue.addToSendQueue(new C01PacketChatMessage(String.join(" ", args)));
     }
-
 }

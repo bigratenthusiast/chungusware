@@ -23,10 +23,6 @@ public class Shader extends Module {
         if (shaderGroup == null || !shaderGroup.getShaderGroupName().contains(shader)) applyShader(shader);
     });
 
-    public Shader() {
-        super("Shader", Keyboard.KEY_NONE, Type.RENDER);
-    }
-
     public static void removeShader() {
         IEntityRenderer renderer = ((IEntityRenderer) Minecraft.getMinecraft().entityRenderer);
         if (renderer.getTheShaderGroup() != null) renderer.getTheShaderGroup().deleteShaderGroup();
@@ -59,4 +55,7 @@ public class Shader extends Module {
         removeShader();
     }
 
+    public Shader() {
+        super("Shader", Keyboard.KEY_NONE, Type.RENDER);
+    }
 }

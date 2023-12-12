@@ -36,11 +36,12 @@ public class Utils {
     public static List<String> enableOnStart = Arrays.asList(
             "discordrpc",
             "autoez",
-            "footstepassist"
+            "footstepassist",
+            "autotool"
     );
 
-    public static int[] transFlagColors(int length) {
-        return length == 1 ? new int[]{Colors.pink} : new int[]{Colors.blue, Colors.pink, Colors.white, Colors.pink, Colors.blue};
+    public static int[] palestineColors(int length) {
+        return length == 1 ? new int[]{Colors.white} : new int[]{Colors.red, Colors.gray, Colors.green};
     }
 
     public static Runnable getRunnable(SkinManager outer, GameProfile gameProfile, SkinManager.SkinAvailableCallback callback, boolean secure) {
@@ -83,9 +84,11 @@ public class Utils {
 
     public static class Colors {
         public static int blue = 0xFF55CDFC;
+        public static int gray = 0xFF242424;
         public static int white = -1;
         public static int pink = 0xFFF7A8B8;
         public static int red = 0xFFF03E3E;
+        public static int green = 0xFF239063;
         public static int transparentGray = 0x90000000;
     }
 

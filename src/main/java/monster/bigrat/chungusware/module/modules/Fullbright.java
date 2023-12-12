@@ -6,10 +6,6 @@ import org.lwjgl.input.Keyboard;
 public class Fullbright extends Module {
     public float initialGamma = 1;
 
-    public Fullbright() {
-        super("Fullbright", Keyboard.KEY_O, Type.RENDER);
-    }
-
     @Override
     public void onEnable() {
         initialGamma = mc.gameSettings.gammaSetting;
@@ -20,5 +16,9 @@ public class Fullbright extends Module {
     public void onDisable() {
         mc.gameSettings.gammaSetting = initialGamma;
         initialGamma = 1;
+    }
+
+    public Fullbright() {
+        super("Fullbright", Keyboard.KEY_O, Type.RENDER);
     }
 }

@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(NetworkManager.class)
 public class MixinNetworkManager {
-
     @Inject(method = "sendPacket(Lnet/minecraft/network/Packet;)V", at = @At("HEAD"), cancellable = true)
     public void sendPacket(Packet packetIn, CallbackInfo ci) {
         SendPacketEvent event = new SendPacketEvent(packetIn);

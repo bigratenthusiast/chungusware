@@ -37,13 +37,6 @@ public class Blink extends Module {
         }
     });
 
-    public Blink() {
-        super("Blink", Keyboard.KEY_R, Type.MOVEMENT);
-        this.settings.add("isCancelable", false);
-        this.settings.add("withholdAllPackets", true);
-        this.settings.add("maxPacketAmount", 200);
-    }
-
     @Override
     public void onEnable() {
         if (mc.isSingleplayer()) return;
@@ -75,6 +68,13 @@ public class Blink extends Module {
             mc.theWorld.removeEntityFromWorld(FAKE_PLAYER_ID); // Remove fake blink Player
             clonedPlayer = null;
         }
+    }
+
+    public Blink() {
+        super("Blink", Keyboard.KEY_R, Type.MOVEMENT);
+        this.settings.add("isCancelable", false);
+        this.settings.add("withholdAllPackets", true);
+        this.settings.add("maxPacketAmount", 200);
     }
 }
 

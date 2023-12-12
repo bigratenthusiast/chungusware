@@ -8,5 +8,4 @@ enum Era {
 
 public class ClientEvent extends Cancellable {
     public Era era = Era.PRE;
-
 }

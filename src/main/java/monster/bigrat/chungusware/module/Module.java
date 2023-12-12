@@ -43,11 +43,9 @@ public class Module implements Listenable {
         }
     }
 
-    public void onEnable() {
-    }
+    public void onEnable() {}
 
-    public void onDisable() {
-    }
+    public void onDisable() {}
 
     public int getPercentSlidIn() {
         return percentSlidIn;
@@ -61,8 +59,6 @@ public class Module implements Listenable {
         return "§" + (toggled ? "a" : "c") + this.name + "§f";
     }
 
-    public enum Type {
-        MOVEMENT, RENDER, MISC
-    }
+    public enum Type { MOVEMENT, RENDER, MISC }
 }
 
